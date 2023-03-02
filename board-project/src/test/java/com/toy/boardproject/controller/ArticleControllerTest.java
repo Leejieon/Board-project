@@ -13,7 +13,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 
 @DisplayName("View Controller TEST - 게시글")
-@WebMvcTest(ArticleControllerTest.class) // 테스트 대상이 되는 컨트롤러만 빈으로 읽어오도록 설정
+@WebMvcTest(ArticleController.class) // 테스트 대상이 되는 컨트롤러만 빈으로 읽어오도록 설정
 class ArticleControllerTest {
 
     private final MockMvc mvc;

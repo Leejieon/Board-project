@@ -1,10 +1,12 @@
 package com.toy.boardproject.controller;
 
+import com.toy.boardproject.config.SecurityConfig;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -13,6 +15,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 
 @DisplayName("View Controller TEST - 게시글")
+@Import(SecurityConfig.class)
 @WebMvcTest(ArticleController.class) // 테스트 대상이 되는 컨트롤러만 빈으로 읽어오도록 설정
 class ArticleControllerTest {
 
